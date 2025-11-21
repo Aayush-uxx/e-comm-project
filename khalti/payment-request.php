@@ -35,7 +35,7 @@ if (isset($_POST['submit'])) {
             ]
         ],
         "payment_preferences" => ["KHALTI"],
-        "return_url" => "https://localhost/PHPSITE/payment/success.php",
+        "return_url" => "https://localhost/PHPSITE/payment/success.php", //remember to change path for success redirection
         "website_url" => "https://localhost/PHPSITE"
     ];
 
@@ -47,7 +47,7 @@ if (isset($_POST['submit'])) {
         CURLOPT_CUSTOMREQUEST => 'POST',
         CURLOPT_POSTFIELDS => json_encode($payload),
         CURLOPT_HTTPHEADER => [
-            'Authorization: Key 428dd873cc07496788d635edba3aa0bc', // ⚠ Replace with environment-secured key in production
+            'Authorization: ', // ⚠ Replace with environment-secured key in production
             'Content-Type: application/json'
         ]
     ]);
